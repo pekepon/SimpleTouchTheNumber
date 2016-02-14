@@ -50,6 +50,10 @@ class GameViewController: UIViewController {
         readyCountLabel.hidden = true
         readyScreenView.hidden = true
         
+        clearImage.hidden = true;
+        startButton.hidden = true;
+        topButton.hidden = true;
+        
         shuffleArray()
         
         let buttonColor = selectButtonColor()
@@ -81,7 +85,7 @@ class GameViewController: UIViewController {
         let num = Int(arc4random_uniform(UInt32(array.count)))
         return array[num]
     }
-    
+   
     func countUp() {
         timerCountLabel.text = "Time: ".stringByAppendingFormat("%.2f", numberCountUp)
         numberCountUp += 0.01
